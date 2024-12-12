@@ -1,246 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>CRES - FCP</title>
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        color: #333;
-      }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
 
-      canvas {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        pointer-events: none;
-      }
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
 
-      .poem-section {
-        padding: 60px 40px;
-        text-align: center;
-      }
+        .poem-section {
+            padding: 60px 40px;
+            text-align: center;
+        }
 
-      #colors-section,
-      #rivers-section,
-      #class-section {
-        background: #0a0a0a;
-        color: white;
-        z-index: -1;
-        position: relative;
-        padding-bottom: 400px;
-      }
+        #colors-section,
+        #rivers-section,
+        #class-section {
+            background: #0a0a0a;
+            color: white;
+            z-index: -1;
+            position: relative;
+            padding-bottom: 400px;
+        }
 
-      .poem-title {
-        font-size: 2.5em;
-        margin-bottom: 50px;
-      }
+        .poem-title {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+        }
 
-      .poem-text {
-        max-width: 800px;
-        margin: 0 auto;
-        line-height: 1.5;
-        font-size: 1.2em;
-      }
+        .poem-text {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+            font-size: 1.2em;
+        }
 
-      .poem-text p {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-      }
+        .poem-text p {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <canvas id="backgroundCanvas"></canvas>
     <div id="colors-section" class="poem-section">
-      <div>
-        <h1 class="poem-title">Colors</h1>
-        <div class="poem-text">
-          <p>Red, the color of valor and bravery,</p>
-          <p>the color that runs through my veins.</p>
-          <p>Red, the color that bled from our palms</p>
-          <p>and the soles of our feet in the rain.</p>
-          <br />
-          <p>Red represents my ancestors’ plight,</p>
-          <p>Framed by the stars in the sky.</p>
-          <p>The stars that they chased, that were too far to reach,</p>
-          <p>instead were the rocks in the mines.</p>
-          <br />
-          <p>White is the color of purity and innocence,</p>
-          <p>a slate which is meant to be blank.</p>
-          <p>White is the color of smiling brides,</p>
-          <p>and the dress that’s adorned by the saints.</p>
-          <br />
-          <p>White represents what’s expected from me,</p>
-          <p>since a woman should know where she sits</p>
-          <p>at the table of fathers and uncles and men,</p>
-          <p>for or else she’s perceived as a bitch.</p>
-          <br />
-          <p>Blue is vigilance, perseverance, justice,</p>
-          <p>the color that paints the sky.</p>
-          <p>Blue is our oceans, our seas, and our lakes,</p>
-          <p>the freedom we seek when we cry.</p>
-          <br />
-          <p>Blue represents the democracy lost</p>
-          <p>and the hope that I held for our kind.</p>
-          <p>It’s the feeling that festers inside of my soul</p>
-          <p>and the silence that’s since filled my mind.</p>
-          <br />
-          <p>The colors that fly in the sky up above</p>
-          <p>are the colors defining our rule.</p>
-          <p>It seems that no matter how hard that I try,</p>
-          <p>I am followed by red, white, and blue.</p>
+        <div>
+            <h1 class="poem-title">Colors</h1>
+            <div class="poem-text">
+                <p>Red, the color of valor and bravery,</p>
+                <p>the color that runs through my veins.</p>
+                <p>Red, the color that bled from our palms</p>
+                <p>and the soles of our feet in the rain.</p>
+                <br />
+                <p>Red represents my ancestors’ plight,</p>
+                <p>Framed by the stars in the sky.</p>
+                <p>The stars that they chased, that were too far to reach,</p>
+                <p>instead were the rocks in the mines.</p>
+                <br />
+                <p>White is the color of purity and innocence,</p>
+                <p>a slate which is meant to be blank.</p>
+                <p>White is the color of smiling brides,</p>
+                <p>and the dress that’s adorned by the saints.</p>
+                <br />
+                <p>White represents what’s expected from me,</p>
+                <p>since a woman should know where she sits</p>
+                <p>at the table of fathers and uncles and men,</p>
+                <p>for or else she’s perceived as a bitch.</p>
+                <br />
+                <p>Blue is vigilance, perseverance, justice,</p>
+                <p>the color that paints the sky.</p>
+                <p>Blue is our oceans, our seas, and our lakes,</p>
+                <p>the freedom we seek when we cry.</p>
+                <br />
+                <p>Blue represents the democracy lost</p>
+                <p>and the hope that I held for our kind.</p>
+                <p>It’s the feeling that festers inside of my soul</p>
+                <p>and the silence that’s since filled my mind.</p>
+                <br />
+                <p>The colors that fly in the sky up above</p>
+                <p>are the colors defining our rule.</p>
+                <p>It seems that no matter how hard that I try,</p>
+                <p>I am followed by red, white, and blue.</p>
+            </div>
         </div>
-      </div>
     </div>
 
     <div id="rivers-section" class="poem-section">
-      <div>
-        <h1 class="poem-title">still the rivers whisper</h1>
-        <div class="poem-text">
-          <p>This land was never empty.</p>
-          <p>It sang with names before conquest,</p>
-          <p>with rivers that whispered stories</p>
-          <p>in languages buried under concrete.</p>
-          <br />
-          <p>Boots crushed earth,</p>
-          <p>treaties burned; smoke rising like ghosts.</p>
-          <p>They called it discovery; arriving meant erasing.</p>
-          <p>As if claiming meant stealing could be law.</p>
-          <br />
-          <p>The gavel struck: a chorus of lies.</p>
-          <p>"Occupancy;" but not sovereignty.</p>
-          <p>"Domestic dependent;" nations into wards,</p>
-          <p>power locked in chains of trust.</p>
-          <br />
-          <p>On the trail of tears, the soil was watered</p>
-          <p>with grief. A march that left footprints</p>
-          <p>in blood. Roots ripped from the ground,</p>
-          <p>but still defiant, stretching deeper.</p>
-          <br />
-          <p>“Kill the Indian, save the man.”</p>
-          <p>They stole the children, their tongues,</p>
-          <p>their songs, their stories.</p>
-          <p>But songs do not die. They hide,</p>
-          <p>waiting for the wind to remember.</p>
-          <br />
-          <p>The concrete cracks;</p>
-          <p>roots pushing through like fists.</p>
-          <p>Still they steal, pipelines piercing sacred land,</p>
-          <p>still the treaties burn,</p>
-          <p>still the rivers whisper.</p>
-          <br />
-          <p>The land remembers.</p>
-          <p>The weight of history,</p>
-          <p>in every stone, every tree.</p>
+        <div>
+            <h1 class="poem-title">still the rivers whisper</h1>
+            <div class="poem-text">
+                <p>This land was never empty.</p>
+                <p>It sang with names before conquest,</p>
+                <p>with rivers that whispered stories</p>
+                <p>in languages buried under concrete.</p>
+                <br />
+                <p>Boots crushed earth,</p>
+                <p>treaties burned; smoke rising like ghosts.</p>
+                <p>They called it discovery; arriving meant erasing.</p>
+                <p>As if claiming meant stealing could be law.</p>
+                <br />
+                <p>The gavel struck: a chorus of lies.</p>
+                <p>"Occupancy;" but not sovereignty.</p>
+                <p>"Domestic dependent;" nations into wards,</p>
+                <p>power locked in chains of trust.</p>
+                <br />
+                <p>On the trail of tears, the soil was watered</p>
+                <p>with grief. A march that left footprints</p>
+                <p>in blood. Roots ripped from the ground,</p>
+                <p>but still defiant, stretching deeper.</p>
+                <br />
+                <p>“Kill the Indian, save the man.”</p>
+                <p>They stole the children, their tongues,</p>
+                <p>their songs, their stories.</p>
+                <p>But songs do not die. They hide,</p>
+                <p>waiting for the wind to remember.</p>
+                <br />
+                <p>The concrete cracks;</p>
+                <p>roots pushing through like fists.</p>
+                <p>Still they steal, pipelines piercing sacred land,</p>
+                <p>still the treaties burn,</p>
+                <p>still the rivers whisper.</p>
+                <br />
+                <p>The land remembers.</p>
+                <p>The weight of history,</p>
+                <p>in every stone, every tree.</p>
+            </div>
         </div>
-      </div>
     </div>
 
     <div id="class-section" class="poem-section">
-      <div>
-        <h1 class="poem-title">Dumb poem</h1>
-        <div class="poem-text">
-          <p>We the people of the United States</p>
-          <p>Spend so much time in political debates</p>
-          <p>So many problems that are to be solved</p>
-          <p>Seem to never go away at all</p>
-          <br />
-          <p>And so we look at those in charge</p>
-          <p>With their wealth that’s so large</p>
-          <p>We ask them to help us out</p>
-          <p>“No way!” some of them shout</p>
-          <br />
-          <p>But some others seem to want to help</p>
-          <p>And graciously allocate us some wealth</p>
-          <p>But almost in a blink of an eye</p>
-          <p>Systematically it all runs dry </p>
-          <br />
-          <p>This nation is not built for you and me</p>
-          <p>It’s for those with power you see</p>
-          <p>This notion of an American Dream</p>
-          <p>May just be a giant scheme</p>
+        <div>
+            <h1 class="poem-title">Dumb poem</h1>
+            <div class="poem-text">
+                <p>We the people of the United States</p>
+                <p>Spend so much time in political debates</p>
+                <p>So many problems that are to be solved</p>
+                <p>Seem to never go away at all</p>
+                <br />
+                <p>And so we look at those in charge</p>
+                <p>With their wealth that’s so large</p>
+                <p>We ask them to help us out</p>
+                <p>“No way!” some of them shout</p>
+                <br />
+                <p>But some others seem to want to help</p>
+                <p>And graciously allocate us some wealth</p>
+                <p>But almost in a blink of an eye</p>
+                <p>Systematically it all runs dry </p>
+                <br />
+                <p>This nation is not built for you and me</p>
+                <p>It’s for those with power you see</p>
+                <p>This notion of an American Dream</p>
+                <p>May just be a giant scheme</p>
+            </div>
         </div>
-      </div>
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const canvas = document.getElementById('backgroundCanvas');
-        const ctx = canvas.getContext('2d');
-        let dots = [];
+        document.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.getElementById('backgroundCanvas');
+            const ctx = canvas.getContext('2d');
+            let dots = [];
+            const cursor = {
+                x: -1000,
+                y: -1000,
+                radius: 100
+            };
 
-        function resizeCanvas() {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
-          createDots();
-        }
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                createDots();
+            }
 
-        function createDots() {
-          dots = [];
-          for (let i = 0; i < 100; i++) {
-            dots.push({
-              x: Math.random() * canvas.width,
-              y: Math.random() * canvas.height,
-              radius: Math.random() * 2 + 1,
-              speedX: (Math.random() - 0.5) * 0.5,
-              speedY: (Math.random() - 0.5) * 0.5,
-            });
-          }
-        }
+            function createDots() {
+                dots = [];
+                for (let i = 0; i < 100; i++) {
+                    dots.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        radius: Math.random() * 2 + 1,
+                        speedX: (Math.random() - 0.5) * 2,
+                        speedY: (Math.random() - 0.5) * 2,
+                    });
+                }
+            }
 
-        function drawDots() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.fillStyle = 'white';
-          dots.forEach(dot => {
-            ctx.beginPath();
-            ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
-            ctx.fill();
-            dot.x += dot.speedX;
-            dot.y += dot.speedY;
+            function drawDots() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = 'white';
 
-            if (dot.x < 0) dot.x = canvas.width;
-            if (dot.x > canvas.width) dot.x = 0;
-            if (dot.y < 0) dot.y = canvas.height;
-            if (dot.y > canvas.height) dot.y = 0;
-          });
-        }
+                dots.forEach(dot => {
+                    ctx.beginPath();
+                    ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
+                    ctx.fill();
 
-        function animate() {
-          drawDots();
-          requestAnimationFrame(animate);
-        }
+                    const dx = dot.x - cursor.x;
+                    const dy = dot.y - cursor.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
 
-        function checkVisibility() {
-          const windowHeight = window.innerHeight;
-          const centerTop = windowHeight / 4;
-          const centerBottom = windowHeight * 3 / 4;
+                    if (distance < cursor.radius) {
+                        const angle = Math.atan2(dy, dx);
+                        const force = (cursor.radius - distance) / cursor.radius;
+                        dot.speedX += Math.cos(angle) * force * 0.5;
+                        dot.speedY += Math.sin(angle) * force * 0.5;
+                    }
 
-          document.querySelectorAll('.poem-text p').forEach(p => {
-            const rect = p.getBoundingClientRect();
+                    const velocity = Math.sqrt(dot.speedX * dot.speedX + dot.speedY * dot.speedY);
+                    if (velocity > 2) {
+                        dot.speedX = (dot.speedX / velocity) * 2;
+                        dot.speedY = (dot.speedY / velocity) * 2;
+                    }
 
-            const distanceFromCenter = Math.min(
-              Math.abs(windowHeight / 2 - (rect.top + rect.bottom) / 2),
-              windowHeight / 2
-            );
-            const opacity = 1 - (distanceFromCenter / (windowHeight / 2));
+                    dot.x += dot.speedX;
+                    dot.y += dot.speedY;
 
-            p.style.opacity = Math.max(0, opacity);
-          });
-        }
+                    if (dot.x < 0) dot.x = canvas.width;
+                    if (dot.x > canvas.width) dot.x = 0;
+                    if (dot.y < 0) dot.y = canvas.height;
+                    if (dot.y > canvas.height) dot.y = 0;
+                });
+            }
 
-        window.addEventListener('resize', resizeCanvas);
-        window.addEventListener('scroll', checkVisibility);
+            function checkVisibility() {
+                const windowHeight = window.innerHeight;
+                const centerTop = windowHeight / 4;
+                const centerBottom = windowHeight * 3 / 4;
 
-        resizeCanvas();
-        animate();
-        checkVisibility();
-      });
+                document.querySelectorAll('.poem-text p').forEach(p => {
+                    const rect = p.getBoundingClientRect();
+
+                    const distanceFromCenter = Math.min(
+                        Math.abs(windowHeight / 2 - (rect.top + rect.bottom) / 2),
+                        windowHeight / 2
+                    );
+                    const opacity = 1 - (distanceFromCenter / (windowHeight / 2));
+
+                    p.style.opacity = Math.max(0, opacity);
+                });
+            }
+
+            function animate() {
+                drawDots();
+                checkVisibility();
+                requestAnimationFrame(animate);
+            }
+
+            function handleMouseMove(event) {
+                const rect = canvas.getBoundingClientRect();
+                cursor.x = event.clientX - rect.left;
+                cursor.y = event.clientY - rect.top;
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            window.addEventListener('mousemove', handleMouseMove);
+            window.addEventListener('scroll', checkVisibility);
+
+            resizeCanvas();
+            createDots();
+            animate();
+        });
     </script>
-  </body>
+</body>
+
 </html>
